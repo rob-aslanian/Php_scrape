@@ -16,16 +16,7 @@
         }
 
         public function scrape($url){
-            $parts=parse_url($url);
-            $fp = fsockopen($parts['host'],isset($parts['port'])?$parts['port']:80,$errno, $errstr, 30);
-            $out = "GET ".$parts['path']." HTTP/1.1\r\n";
-            $out.= "Host: ".$parts['host']."\r\n";
-            $out.= "Content-Length: 0"."\r\n";
-            $out.= "Connection: Close\r\n\r\n";
-
-            fwrite($fp, $out);
-            fclose($fp);
-            
+           
             $headers = [
                     "Accept: text/html",
                     "Cache-Control: max-age=0",
