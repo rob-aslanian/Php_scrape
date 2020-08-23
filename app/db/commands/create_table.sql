@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS `newsfeed` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT,       
+  `origin_url`  VARCHAR(200) NOT NULL,   
+  `title` VARCHAR(250)  NOT NULL DEFAULT '',     
+  `description` TEXT DEFAULT NULL,    
+  `img_url` VARCHAR(200) DEFAULT NULL, 
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   PRIMARY KEY  (`id`),
+   UNIQUE (`origin_url`)
+
+);

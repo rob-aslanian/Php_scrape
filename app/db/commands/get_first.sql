@@ -1,0 +1,1 @@
+SELECT id , origin_url FROM newsfeed LIMIT 1;

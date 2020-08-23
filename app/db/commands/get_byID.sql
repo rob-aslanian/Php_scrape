@@ -1,0 +1,1 @@
+SELECT * FROM newsfeed WHERE id = (?) 
